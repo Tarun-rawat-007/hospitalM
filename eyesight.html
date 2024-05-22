@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.eyesight-section {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eyesight-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.eyesight-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.eyesight-result {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-image: url('p56.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+   
+}
+
+.eyesight-result h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.eyesight-result p {
+    color: #666;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <section class="eyesight-section">
+        <h2>Eyesight Vision Report</h2>
+        <p>Keep your eyes healthy with regular checkups.</p>
+        <div class="eyesight-result">
+            <h3>6/6 Vision</h3>
+            <p></p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/12 Vision</h3>
+            <p></p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/9 Vision</h3>
+            <p></p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/4 Vision</h3>
+            <p></p>
+        </div>
+    </section>
+    <script>
+        // Define eyesight values
+        const eyesightValues = {
+            '6/6': 6 / 6,
+            '6/12': 6 / 12,
+            '6/9': 6 / 9,
+            '6/4': 6 / 4
+        };
+    
+        // Function to determine eyesight category
+        function getEyesightCategory(eyesightValue) {
+            if (eyesightValue >= eyesightValues['6/6'] && eyesightValue < eyesightValues['6/4']) {
+                return 'Slightly better than average';
+            } else if (eyesightValue >= eyesightValues['6/4'] && eyesightValue <= eyesightValues['6/6']) {
+                return 'Better than average';
+            } else if (eyesightValue > eyesightValues['6/6'] && eyesightValue <= eyesightValues['6/9']) {
+                return 'Average';
+            } else if (eyesightValue > eyesightValues['6/9'] && eyesightValue <= eyesightValues['6/12']) {
+                return 'Slightly worse than average';
+            } else {
+                return 'Worse than average';
+            }
+        }
+    
+        // Display eyesight report for each value
+        const eyesightResults = document.querySelectorAll('.eyesight-result p');
+        for (let i = 0; i < eyesightResults.length; i++) {
+            const eyesightValue = eyesightValues[Object.keys(eyesightValues)[i]];
+            const eyesightCategory = getEyesightCategory(eyesightValue);
+            eyesightResults[i].textContent = `Category: ${eyesightCategory}`;
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination and medical information </title>
+    <style>
+        /* Basic styling */
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db ;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+      
+        .hero {
+            background-image: url('hospital.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .features {
+            background-image: url('p1.jpg');
+            background-size: cover;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .bmi-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #3498db ;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            position: relative;
+            width: 100%;
+        }
+        .vaccination-section {
+            background-image: url('p1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: rgba(39, 38, 38, 0.993);
+            padding: 50px;
+            text-align: center;
+            font-size: large;
+            display: flex;
+            height: 400px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .vaccination-section img {
+            width: 300px;
+            margin-top: 20px;
+        }
+        .vaccine-section{
+          
+          padding: 53px 34px;
+          background-color: rgba(197, 188, 188, 0.301);
+       }
+       .disease-list {
+          
+   list-style-type: none;
+   padding: 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-gap: 10px;
+}
+
+.disease-list li {
+   margin-bottom: 10px;
+}
+
+.disease-list a {
+   display: block;
+   padding: 10px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   text-decoration: none;
+   color: #333;
+   transition: background-color 0.3s ease;
+}
+
+.disease-list a:hover {
+   background-color: #969696d5;
+   color: black;
+}
+.bmi-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            padding: 50px;
+            height: 500px;
+        }
+        .bmi-content {
+            text-align: center;
+            margin-right: 20px;
+            background-color: rgba(197, 188, 188, 0.301);
+            padding: 80px;
+            
+          
+        }
+        .bmi-image img {
+            width: 700px;
+        }
+
+        #bmi-result {
+            margin-top: 10px;
+        }
+        .eyesight-section {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eyesight-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.eyesight-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.eyesight-result {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-image: url('p56.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+   
+}
+
+.eyesight-result h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.eyesight-result p {
+    color: #666;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health & Wealth: Well-being of Humans</h1>
+        <p>Efficiently manage your hospital operations & Essential Health Report: BMI, Eyesight, and Vaccination Status</p>
+    </header>
+
+    <section class="vaccination-section">
+        <h1>Stay Informed About Vaccination</h1>
+        <p>Get the latest updates on  vaccination.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius eros nec lacus efficitur tincidunt.</p>
+        <p>For the latest information on  vaccination eligibility, distribution, and scheduling, please visit the official government health department website or consult your healthcare provider.</p>
+    </section>
+   
+
+    <section class="vaccine-section">
+        <h2>Recommended Vaccines by Disease</h2>
+        <p>Vaccines are available for these 18 dangerous or deadly diseases. Over the years, these vaccines have prevented countless cases of disease and saved millions of lives. Infants, children, adolescents, teens, and adults need different vaccinations, depending on their age, location, job, lifestyle, travel schedule, health conditions, or previous vaccinations.</p>
+        <ul class="disease-list">
+            <li><a href="#">Chickenpox (Varicella)</a></li>
+            <li><a href="#">Dengue</a></li>
+            <li><a href="#">Diphtheria</a></li>
+            <li><a href="#">Flu (Influenza)</a></li>
+            <li><a href="#">Hepatitis A</a></li>
+            <li><a href="#">Hepatitis B</a></li>
+            <li><a href="#">Hib (Haemophilus influenzae type b)</a></li>
+            <li><a href="#">HPV (Human Papillomavirus)</a></li>
+            <li><a href="#">Measles</a></li>
+            <li><a href="#">Meningococcal</a></li>
+            <li><a href="#">Mumps</a></li>
+            <li><a href="#">Pneumococcal</a></li>
+            <li><a href="#">Polio (Poliomyelitis)</a></li>
+            <li><a href="#">Rotavirus</a></li>
+            <li><a href="#">RSV (Respiratory Syncytial Virus)</a></li>
+            <li><a href="#">Rubella (German Measles)</a></li>
+            <li><a href="#">Shingles (Herpes Zoster)</a></li>
+            <li><a href="#">Tetanus (Lockjaw)</a></li>
+            <li><a href="#">Whooping Cough (Pertussis)</a></li>
+        </ul>
+    </section>
+    <hr>
+    <section class="bmi-section">
+     
+        <div class="bmi-content">
+            <h1>Calculate Your BMI</h1>
+            <p>Keep track of your health with our BMI calculator.</p>
+            <form id="bmi-form">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required><br><br>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required><br><br>
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <div id="bmi-result"></div>
+        </div>
+        <div class="bmi-image">
+            <img src="p93.jpg " alt="BMI Calculator">
+        </div>
+    </section>
+    <script>
+        document.getElementById('bmi-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            
+            if (isNaN(height) || isNaN(weight)) {
+                document.getElementById('bmi-result').innerHTML = '<p>Please enter valid height and weight.</p>';
+                return;
+            }
+            
+            const bmi = calculateBMI(height, weight);
+            const bmiCategory = getBMICategory(bmi);
+            
+            document.getElementById('bmi-result').innerHTML = `<p>Your BMI: ${bmi.toFixed(2)}</p><p>Category: ${bmiCategory}</p>`;
+        });
+        
+        function calculateBMI(height, weight) {
+            return weight / ((height / 100) * (height / 100));
+        }
+        
+        function getBMICategory(bmi) {
+            if (bmi < 18.5) {
+                return 'Underweight';
+            } else if (bmi < 24.9) {
+                return 'Normal weight';
+            } else if (bmi < 29.9) {
+                return 'Overweight';
+            } else {
+                return 'Obesity';
+            }
+        }
+    </script>
+
+
+    <hr>
+    <section class="eyesight-section">
+        <h2>Eyesight Vision Report</h2>
+        <p>Keep your eyes healthy with regular checkups.</p>
+        <div class="eyesight-result">
+            <h3>6/6 Vision</h3>
+            <p>Slightly better than average</p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/12 Vision</h3>
+            <p>Better than average</p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/9 Vision</h3>
+            <p>Average</p>
+        </div>
+        <div class="eyesight-result">
+            <h3>6/4 Vision</h3>
+            <p>Worse than average</p>
+        </div>
+    </section>
+     <footer>
+        <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
